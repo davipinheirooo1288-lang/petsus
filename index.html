@@ -2157,8 +2157,8 @@
                   <input id="pet" name="pet" type="text" placeholder="Nome do pet" autocomplete="off" required />
                 </div>
                 <div class="field">
-                  <label for="animal">Qual animal é?</label>
-                  <input id="animal" name="animal" type="text" placeholder="Ex.: cachorro, gato, ave, silvestre..." autocomplete="off" required />
+                  <label for="especie">Informe a espécie do pet</label>
+                  <input id="especie" name="especie" type="text" placeholder="Ex.: cachorro, gato, ave, coelho, hamster..." autocomplete="off" required />
                 </div>
                 <div class="field">
                   <label for="servico">Serviço desejado</label>
@@ -2367,13 +2367,13 @@
         const form = new FormData(bookingForm);
         const name = String(form.get("nome") || "").trim();
         const pet = String(form.get("pet") || "").trim();
-        const animal = String(form.get("animal") || "").trim();
+        const species = String(form.get("especie") || "").trim();
         const service = bookingForm.servico.options[bookingForm.servico.selectedIndex].text.trim();
         const note = String(form.get("mensagem") || "").trim();
         const message = [
           `Olá! Meu nome é ${name}.`,
           `Nome do pet: ${pet}.`,
-          `Animal: ${animal}.`,
+          `Espécie do pet: ${species}.`,
           `Gostaria de agendar o serviço: ${service}.`,
           note ? `Observação: ${note}.` : ""
         ]
