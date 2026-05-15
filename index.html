@@ -2149,8 +2149,16 @@
               <p>A conversa abre direto no WhatsApp com o serviço selecionado.</p>
               <form data-booking-form>
                 <div class="field">
-                  <label for="nome">Nome completo</label>
-                  <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required />
+                  <label for="nome">Nome do tutor</label>
+                  <input id="nome" name="nome" type="text" placeholder="Nome do tutor" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="pet">Nome do pet</label>
+                  <input id="pet" name="pet" type="text" placeholder="Nome do pet" autocomplete="off" required />
+                </div>
+                <div class="field">
+                  <label for="animal">Qual animal é?</label>
+                  <input id="animal" name="animal" type="text" placeholder="Ex.: cachorro, gato, ave, silvestre..." autocomplete="off" required />
                 </div>
                 <div class="field">
                   <label for="servico">Serviço desejado</label>
@@ -2173,10 +2181,6 @@
                     <option>Vacinas para animais</option>
                     <option>Atendimento veterinário</option>
                   </select>
-                </div>
-                <div class="field">
-                  <label for="email">E-mail <span>(opcional)</span></label>
-                  <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" />
                 </div>
                 <div class="field">
                   <label for="mensagem">Mensagem <span>(opcional)</span></label>
@@ -2362,13 +2366,15 @@
         event.preventDefault();
         const form = new FormData(bookingForm);
         const name = String(form.get("nome") || "").trim();
+        const pet = String(form.get("pet") || "").trim();
+        const animal = String(form.get("animal") || "").trim();
         const service = bookingForm.servico.options[bookingForm.servico.selectedIndex].text.trim();
-        const email = String(form.get("email") || "").trim();
         const note = String(form.get("mensagem") || "").trim();
         const message = [
           `Olá! Meu nome é ${name}.`,
+          `Nome do pet: ${pet}.`,
+          `Animal: ${animal}.`,
           `Gostaria de agendar o serviço: ${service}.`,
-          email ? `Meu e-mail: ${email}.` : "",
           note ? `Observação: ${note}.` : ""
         ]
           .filter(Boolean)
