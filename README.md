@@ -2,6 +2,11 @@
 
 Site estático premium para a Pet Sus | Clínica Veterinária Popular 24h em Fortaleza.
 
+## Links
+
+- Site no ar: https://petsus.vercel.app
+- Repositório: https://github.com/davipinheirooo1288-lang/petsus
+
 ## Estrutura
 
 - `index.html`: página principal com CSS e JavaScript embutidos.
@@ -18,4 +23,10 @@ Site estático premium para a Pet Sus | Clínica Veterinária Popular 24h em For
 
 ## Publicação
 
-O projeto não precisa de build. Pode ser publicado diretamente na Vercel como site estático.
+O projeto não precisa de build. Ele está linkado ao projeto `petsus` na Vercel.
+
+Para publicar uma atualização:
+
+1. Edite os arquivos necessários.
+2. Faça commit e push para o GitHub.
+3. A Vercel pode publicar pelo repositório conectado, ou você pode rodar `npx vercel@latest deploy --yes` pela pasta do projeto.
