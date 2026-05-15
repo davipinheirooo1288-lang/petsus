@@ -1,0 +1,2498 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pet Sus | Clínica Veterinária Popular 24h em Fortaleza</title>
+    <meta
+      name="description"
+      content="Pet Sus em Fortaleza. Clínica veterinária popular 24 horas com atendimento, acessórios, cirurgias, internação, exames, dermatologia, oftalmologia, fisioterapia e cuidado para pets."
+    />
+    <meta name="theme-color" content="#061426" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #061426;
+        --navy-2: #0b1f3a;
+        --navy-3: #123f8f;
+        --blue: #075fea;
+        --gold: #c7a13b;
+        --gold-soft: #efd47f;
+        --cream: #fbf8f1;
+        --cream-2: #f4efe5;
+        --white: #ffffff;
+        --text: #121827;
+        --muted: #6e7588;
+        --line: rgba(18, 24, 39, 0.1);
+        --dark-line: rgba(255, 255, 255, 0.12);
+        --shadow-soft: 0 18px 50px rgba(6, 20, 38, 0.1);
+        --shadow-deep: 0 28px 90px rgba(6, 20, 38, 0.22);
+        --radius: 8px;
+        --max: 1170px;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--white);
+        font-family: "Manrope", Arial, sans-serif;
+        line-height: 1.65;
+        overflow-x: hidden;
+      }
+
+      body.is-menu-open {
+        overflow: hidden;
+      }
+
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 99;
+        padding: 10px 14px;
+        color: var(--white);
+        background: var(--navy);
+        border-radius: var(--radius);
+        transform: translateY(-150%);
+        transition: transform 180ms ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.58);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+        box-shadow: 0 14px 42px rgba(6, 20, 38, 0.08);
+        backdrop-filter: blur(26px) saturate(1.35);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 82px;
+        gap: 26px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 54px;
+        height: 54px;
+        place-items: center;
+        overflow: hidden;
+        background: var(--blue);
+        border-radius: var(--radius);
+        box-shadow: 0 12px 30px rgba(7, 95, 234, 0.18);
+      }
+
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .brand-name {
+        display: grid;
+        gap: 0;
+        line-height: 1;
+      }
+
+      .brand-name small {
+        color: var(--gold);
+        font-size: 0.68rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .brand-name strong {
+        color: var(--navy);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.58rem;
+        line-height: 1;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 10px 16px;
+        color: #2f374b;
+        border-radius: var(--radius);
+        font-size: 0.92rem;
+        font-weight: 800;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.32);
+        transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible,
+      .nav-links a.is-active {
+        color: var(--navy);
+        background: rgba(255, 255, 255, 0.58);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+      }
+
+      .nav-links a::after {
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        width: 18px;
+        height: 2px;
+        background: var(--gold);
+        border-radius: 999px;
+        content: "";
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: opacity 180ms ease;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after,
+      .nav-links a.is-active::after {
+        opacity: 1;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .social-button,
+      .menu-toggle {
+        display: inline-grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border: 0;
+        border-radius: var(--radius);
+        cursor: pointer;
+      }
+
+      .instagram-button {
+        color: var(--white);
+        background: linear-gradient(135deg, #feda75, #fa7e1e 38%, #d62976 68%, #4f5bd5);
+        box-shadow: 0 14px 30px rgba(214, 41, 118, 0.22);
+      }
+
+      .facebook-button {
+        color: var(--white);
+        background: #1877f2;
+        box-shadow: 0 14px 30px rgba(24, 119, 242, 0.22);
+      }
+
+      .menu-toggle {
+        display: none;
+        color: var(--navy);
+        background: var(--cream);
+        border: 1px solid var(--line);
+      }
+
+      .menu-toggle span,
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 2px;
+        content: "";
+      }
+
+      .menu-toggle span::before {
+        transform: translateY(-6px);
+      }
+
+      .menu-toggle span::after {
+        transform: translateY(4px);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 46px;
+        padding: 13px 22px;
+        border: 0;
+        border-radius: var(--radius);
+        font-weight: 900;
+        line-height: 1;
+        cursor: pointer;
+        transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), background 220ms ease;
+        white-space: nowrap;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .btn-gold {
+        color: var(--white);
+        background: linear-gradient(135deg, #d6b24c, #b8891f);
+        box-shadow: 0 18px 42px rgba(184, 137, 31, 0.26);
+      }
+
+      .btn-gold:hover,
+      .btn-gold:focus-visible {
+        box-shadow: 0 22px 54px rgba(184, 137, 31, 0.34);
+      }
+
+      .btn-dark {
+        color: var(--white);
+        background: rgba(6, 20, 38, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+      }
+
+      .btn-light {
+        color: var(--navy);
+        background: var(--white);
+        border: 1px solid var(--line);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 96svh;
+        display: grid;
+        align-items: center;
+        padding: 142px 0 74px;
+        color: var(--white);
+        isolation: isolate;
+        overflow: hidden;
+        background: var(--navy);
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background:
+          linear-gradient(90deg, rgba(4, 11, 24, 0.92) 0%, rgba(4, 11, 24, 0.82) 42%, rgba(4, 11, 24, 0.58) 100%),
+          linear-gradient(180deg, rgba(4, 11, 24, 0.36) 0%, rgba(4, 11, 24, 0.92) 100%),
+          url("assets/images/petsus-hero.png") center / cover no-repeat;
+        content: "";
+        transform: scale(1.04);
+        filter: saturate(0.95);
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: auto 0 0;
+        z-index: -2;
+        height: 28%;
+        background: linear-gradient(180deg, rgba(6, 20, 38, 0), rgba(6, 20, 38, 0.96));
+        content: "";
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(340px, 0.84fr);
+        gap: 68px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        min-height: 38px;
+        padding: 8px 18px;
+        color: var(--gold-soft);
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(239, 212, 127, 0.35);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .eyebrow svg {
+        color: var(--gold-soft);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      .hero h1 {
+        max-width: 790px;
+        margin-top: 28px;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 5.35rem;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .hero h1 span {
+        color: var(--gold-soft);
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 8px;
+      }
+
+      .hero-text {
+        max-width: 660px;
+        margin: 26px 0 0;
+        color: rgba(255, 255, 255, 0.77);
+        font-size: 1.1rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .hero-media {
+        position: relative;
+        min-height: 560px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.42);
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        min-height: 560px;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(0.98) contrast(1.03);
+      }
+
+      .hero-media::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(6, 20, 38, 0.02), rgba(6, 20, 38, 0.42));
+        content: "";
+      }
+
+      .rating-medal {
+        position: absolute;
+        right: 28px;
+        bottom: 28px;
+        z-index: 2;
+        display: grid;
+        width: 138px;
+        height: 138px;
+        place-items: center;
+        color: var(--white);
+        text-align: center;
+        background: linear-gradient(135deg, #d8b858, #a97918);
+        border: 7px solid var(--white);
+        border-radius: 50%;
+        box-shadow: 0 24px 58px rgba(6, 20, 38, 0.28);
+      }
+
+      .rating-medal strong {
+        display: block;
+        font-size: 2.1rem;
+        line-height: 1;
+      }
+
+      .rating-medal span {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.72rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .hero-stats {
+        position: relative;
+        z-index: 4;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: -42px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid var(--dark-line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-deep);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-stat {
+        padding: 24px;
+        color: rgba(255, 255, 255, 0.74);
+        background: rgba(6, 20, 38, 0.7);
+      }
+
+      .hero-stat strong {
+        display: block;
+        color: var(--gold-soft);
+        font-size: 2.05rem;
+        line-height: 1;
+      }
+
+      .hero-stat span {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .section {
+        padding: 112px 0;
+      }
+
+      .section-cream {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 248, 241, 0.96)),
+          var(--cream);
+      }
+
+      .section-dark {
+        color: var(--white);
+        background:
+          linear-gradient(180deg, rgba(6, 20, 38, 0.96), rgba(5, 8, 17, 0.98)),
+          var(--navy);
+      }
+
+      .section-heading {
+        max-width: 760px;
+        margin: 0 auto 56px;
+        text-align: center;
+      }
+
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin: 0 0 18px;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .section-label::before,
+      .section-label::after {
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      .section-heading h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3.6rem;
+        line-height: 1.06;
+        letter-spacing: 0;
+      }
+
+      .section-heading p {
+        margin: 20px auto 0;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .section-dark .section-heading p {
+        color: rgba(255, 255, 255, 0.66);
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .service-card {
+        min-height: 248px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(18, 24, 39, 0.09);
+        border-radius: var(--radius);
+        box-shadow: 0 16px 44px rgba(6, 20, 38, 0.06);
+        transition: transform 260ms var(--ease), box-shadow 260ms var(--ease), border-color 260ms ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(199, 161, 59, 0.36);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .service-icon,
+      .feature-icon,
+      .contact-icon {
+        display: grid;
+        width: 58px;
+        height: 58px;
+        place-items: center;
+        color: var(--gold);
+        background: linear-gradient(135deg, var(--cream), var(--cream-2));
+        border: 1px solid rgba(199, 161, 59, 0.12);
+        border-radius: var(--radius);
+      }
+
+      .service-card h3 {
+        margin-top: 22px;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.34rem;
+        line-height: 1.2;
+      }
+
+      .service-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 7px 12px;
+        color: #4e566b;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.86rem;
+        font-weight: 800;
+      }
+
+      .quick-shop {
+        padding: 30px 0 104px;
+        background: var(--cream);
+      }
+
+      .quick-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .quick-card {
+        overflow: hidden;
+        color: var(--white);
+        background: var(--navy);
+        border-radius: var(--radius);
+        box-shadow: 0 20px 50px rgba(6, 20, 38, 0.12);
+        transition: transform 260ms var(--ease), box-shadow 260ms var(--ease);
+      }
+
+      .quick-card:hover,
+      .quick-card:focus-visible {
+        transform: translateY(-5px);
+        box-shadow: 0 28px 70px rgba(6, 20, 38, 0.18);
+      }
+
+      .quick-visual {
+        position: relative;
+        display: grid;
+        min-height: 214px;
+        place-items: center;
+        isolation: isolate;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 78% 16%, rgba(255, 255, 255, 0.62), transparent 25%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.3));
+      }
+
+      .quick-visual::before {
+        position: absolute;
+        inset: 20px;
+        z-index: -1;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 18px;
+        content: "";
+      }
+
+      .quick-visual svg {
+        width: 94px;
+        height: 94px;
+        color: rgba(6, 20, 38, 0.72);
+        filter: drop-shadow(0 16px 28px rgba(6, 20, 38, 0.14));
+      }
+
+      .quick-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 48px;
+        gap: 16px;
+        align-items: end;
+        min-height: 96px;
+        padding: 18px 18px 20px;
+      }
+
+      .quick-card small {
+        display: block;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .quick-card strong {
+        display: block;
+        margin-top: 2px;
+        font-size: 1.24rem;
+        line-height: 1.15;
+      }
+
+      .quick-arrow {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        color: var(--navy);
+        background: var(--white);
+        border-radius: 50%;
+      }
+
+      .quick-card.medicine {
+        background: linear-gradient(135deg, #0f6d30, #1f8a3f);
+      }
+
+      .quick-card.vaccine {
+        background: linear-gradient(135deg, #c06d13, #f08219);
+      }
+
+      .quick-card.accessories {
+        background: linear-gradient(135deg, #7b6552, #a48a72);
+      }
+
+      .quick-card.exams {
+        background: linear-gradient(135deg, #75b7e6, #a7d4f5);
+      }
+
+      .quick-card.exams .quick-body,
+      .quick-card.exams small {
+        color: var(--navy);
+      }
+
+      .quick-card.exams .quick-arrow {
+        color: var(--blue);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+        gap: 78px;
+        align-items: center;
+      }
+
+      .about-image {
+        position: relative;
+        overflow: hidden;
+        background: var(--navy);
+        border-radius: 18px;
+        box-shadow: var(--shadow-deep);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 560px;
+        object-fit: contain;
+        object-position: center;
+        padding: 10px;
+      }
+
+      .about-image::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(6, 20, 38, 0.08), rgba(6, 20, 38, 0.18));
+        content: "";
+      }
+
+      .about-content .section-label {
+        justify-content: flex-start;
+      }
+
+      .about-content .section-label::before {
+        display: none;
+      }
+
+      .about-content h2 {
+        max-width: 620px;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3.5rem;
+        line-height: 1.05;
+      }
+
+      .gold-rule {
+        width: 58px;
+        height: 3px;
+        margin: 24px 0;
+        background: var(--gold);
+        border-radius: 99px;
+      }
+
+      .about-content p {
+        margin: 0 0 18px;
+        color: #747b8f;
+        font-size: 1.03rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .feature-card {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 16px;
+        align-items: start;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 14px 38px rgba(6, 20, 38, 0.05);
+      }
+
+      .feature-card strong {
+        display: block;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.1rem;
+        line-height: 1.2;
+      }
+
+      .feature-card span {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      .testimonials {
+        overflow: hidden;
+      }
+
+      .testimonial-viewport {
+        overflow: hidden;
+        padding: 8px 0 24px;
+      }
+
+      .testimonial-track {
+        display: flex;
+        gap: 24px;
+        align-items: stretch;
+        will-change: transform;
+      }
+
+      .testimonial-card {
+        flex: 0 0 520px;
+        min-height: 294px;
+        padding: 30px;
+        color: rgba(255, 255, 255, 0.78);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.045));
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      .stars {
+        color: var(--gold-soft);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .testimonial-card blockquote {
+        margin: 24px 0 28px;
+        color: rgba(255, 255, 255, 0.82);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.18rem;
+        font-style: italic;
+        line-height: 1.55;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+
+      .avatar {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        color: var(--navy);
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+        border-radius: 50%;
+        font-weight: 900;
+      }
+
+      .person strong {
+        display: block;
+        color: var(--white);
+        line-height: 1.2;
+      }
+
+      .person span {
+        color: rgba(239, 212, 127, 0.88);
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+
+      .carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .arrow-button {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 180ms var(--ease), background 180ms ease;
+      }
+
+      .arrow-button:hover,
+      .arrow-button:focus-visible {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .dots {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.24);
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot.is-active {
+        width: 28px;
+        background: var(--gold);
+        border-radius: 999px;
+      }
+
+      .hours-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 54px;
+      }
+
+      .hour-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 18px 20px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--radius);
+        color: rgba(255, 255, 255, 0.82);
+        font-weight: 850;
+      }
+
+      .hour-card span {
+        color: var(--gold-soft);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
+        gap: 60px;
+        align-items: start;
+      }
+
+      .contact-title .section-label {
+        justify-content: flex-start;
+      }
+
+      .contact-title .section-label::before {
+        display: none;
+      }
+
+      .contact-title h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3.4rem;
+        line-height: 1.06;
+      }
+
+      .contact-title p {
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 36px;
+      }
+
+      .contact-card {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 18px;
+        align-items: center;
+        padding: 20px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 14px 38px rgba(6, 20, 38, 0.05);
+      }
+
+      .contact-card strong {
+        display: block;
+        color: var(--text);
+        line-height: 1.2;
+      }
+
+      .contact-card span,
+      .contact-card a {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .form-card {
+        padding: 40px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .form-card h3 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.8rem;
+      }
+
+      .form-card p {
+        margin: 10px 0 26px;
+        color: var(--muted);
+      }
+
+      form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field label {
+        font-size: 0.88rem;
+        font-weight: 900;
+      }
+
+      .field label span {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        min-height: 52px;
+        padding: 14px 16px;
+        color: var(--text);
+        background: #fbfcff;
+        border: 1px solid rgba(18, 24, 39, 0.12);
+        border-radius: var(--radius);
+        outline: 0;
+        transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .field textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        background: var(--white);
+        border-color: rgba(199, 161, 59, 0.74);
+        box-shadow: 0 0 0 4px rgba(199, 161, 59, 0.14);
+      }
+
+      .map {
+        margin-top: 58px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .map iframe {
+        width: 100%;
+        height: 370px;
+        border: 0;
+      }
+
+      .brands {
+        padding: 86px 0;
+        overflow: hidden;
+        background: var(--white);
+      }
+
+      .brands-heading {
+        max-width: 760px;
+        margin: 0 auto 42px;
+        text-align: center;
+      }
+
+      .brands-heading h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3rem;
+        line-height: 1.06;
+      }
+
+      .brands-heading p {
+        margin: 16px auto 0;
+        color: var(--muted);
+      }
+
+      .brand-marquee {
+        position: relative;
+        display: grid;
+        gap: 18px;
+      }
+
+      .brand-marquee::before,
+      .brand-marquee::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        width: min(140px, 18vw);
+        pointer-events: none;
+        content: "";
+      }
+
+      .brand-marquee::before {
+        left: 0;
+        background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0));
+      }
+
+      .brand-marquee::after {
+        right: 0;
+        background: linear-gradient(270deg, var(--white), rgba(255, 255, 255, 0));
+      }
+
+      .brand-track {
+        display: flex;
+        width: max-content;
+        gap: 18px;
+        animation: brandScroll 38s linear infinite;
+      }
+
+      .brand-track.reverse {
+        animation-direction: reverse;
+        animation-duration: 46s;
+      }
+
+      .brand-marquee:hover .brand-track {
+        animation-play-state: paused;
+      }
+
+      .brand-logo {
+        display: grid;
+        min-width: 210px;
+        min-height: 94px;
+        place-items: center;
+        padding: 18px 28px;
+        color: var(--navy);
+        background: linear-gradient(180deg, var(--white), #fbfcff);
+        border: 1px solid rgba(18, 24, 39, 0.1);
+        border-radius: var(--radius);
+        box-shadow: 0 12px 34px rgba(6, 20, 38, 0.055);
+      }
+
+      .brand-logo strong {
+        display: block;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.65rem;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .brand-logo span {
+        display: block;
+        margin-top: 7px;
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      @keyframes brandScroll {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(calc(-50% - 9px));
+        }
+      }
+
+      .creator {
+        padding: 46px 0 62px;
+        background: var(--white);
+      }
+
+      .creator-inner {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      .signature {
+        width: min(360px, 100%);
+        mix-blend-mode: multiply;
+      }
+
+      .footer {
+        padding: 38px 0;
+        color: rgba(255, 255, 255, 0.72);
+        background: #050811;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .footer strong {
+        display: block;
+        color: var(--white);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-weight: 800;
+      }
+
+      .wa-popup {
+        position: fixed;
+        right: 28px;
+        bottom: 104px;
+        z-index: 70;
+        width: min(318px, calc(100vw - 36px));
+        padding: 24px;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(18, 24, 39, 0.08);
+        border-radius: 18px;
+        box-shadow: 0 24px 80px rgba(6, 20, 38, 0.18);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(18px);
+        transition: opacity 260ms var(--ease), transform 260ms var(--ease);
+      }
+
+      .wa-popup.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .wa-popup-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .wa-agent {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .wa-agent-icon {
+        display: grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        color: #17a95b;
+        background: #e9f8ef;
+        border-radius: 50%;
+      }
+
+      .wa-agent strong {
+        display: block;
+        line-height: 1.2;
+      }
+
+      .wa-agent span {
+        display: block;
+        margin-top: 3px;
+        color: #1aa85b;
+        font-size: 0.84rem;
+        font-weight: 800;
+      }
+
+      .wa-close {
+        display: grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        color: #9aa0af;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .wa-popup p {
+        margin: 18px 0 16px;
+        color: #626b7e;
+        line-height: 1.5;
+      }
+
+      .wa-popup a {
+        display: inline-flex;
+        color: #8e6514;
+        font-weight: 900;
+        text-decoration: underline;
+        text-decoration-color: rgba(199, 161, 59, 0.48);
+        text-underline-offset: 3px;
+      }
+
+      .wa-float {
+        position: fixed;
+        right: 28px;
+        bottom: 24px;
+        z-index: 71;
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        color: var(--white);
+        background: #1fbd68;
+        border: 5px solid var(--white);
+        border-radius: 50%;
+        box-shadow: 0 18px 46px rgba(31, 189, 104, 0.34);
+        transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+      }
+
+      .wa-float:hover,
+      .wa-float:focus-visible {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 24px 60px rgba(31, 189, 104, 0.42);
+      }
+
+      .wa-badge {
+        position: absolute;
+        top: -8px;
+        right: -6px;
+        display: grid;
+        width: 22px;
+        height: 22px;
+        place-items: center;
+        color: var(--white);
+        background: #ef4444;
+        border: 2px solid var(--white);
+        border-radius: 50%;
+        font-size: 0.72rem;
+        font-weight: 900;
+      }
+
+      .back-top {
+        position: fixed;
+        left: 24px;
+        bottom: 28px;
+        z-index: 65;
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        color: var(--gold);
+        background: var(--white);
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 12px 28px rgba(6, 20, 38, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: opacity 220ms ease, transform 220ms ease;
+      }
+
+      .back-top.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 650ms var(--ease), transform 650ms var(--ease);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1020px) {
+        .nav {
+          min-height: 76px;
+        }
+
+        .menu-toggle {
+          display: inline-grid;
+        }
+
+        .nav-links {
+          position: fixed;
+          inset: 76px 0 auto;
+          display: none;
+          padding: 16px 20px 22px;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid var(--line);
+          box-shadow: var(--shadow-soft);
+        }
+
+        .nav-links.is-open {
+          display: grid;
+        }
+
+        .nav-links a {
+          justify-content: center;
+          min-height: 52px;
+        }
+
+        .hero-grid,
+        .about-grid,
+        .contact-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero h1 {
+          font-size: 4.1rem;
+        }
+
+        .hero-media {
+          min-height: 440px;
+        }
+
+        .hero-media img {
+          min-height: 440px;
+        }
+
+        .hero-stats,
+        .hours-grid,
+        .quick-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .service-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .creator-inner {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .container {
+          width: min(100% - 28px, var(--max));
+        }
+
+        .brand-name strong {
+          font-size: 1.28rem;
+        }
+
+        .brand-name small {
+          font-size: 0.62rem;
+        }
+
+        .brand-mark {
+          width: 48px;
+          height: 48px;
+        }
+
+        .social-button,
+        .nav-actions > .btn {
+          display: none;
+        }
+
+        .hero {
+          padding: 116px 0 52px;
+        }
+
+        .hero h1 {
+          font-size: 3.05rem;
+        }
+
+        .hero-text {
+          font-size: 1rem;
+        }
+
+        .hero-actions,
+        .form-card .btn {
+          width: 100%;
+        }
+
+        .hero-actions .btn,
+        .form-card .btn {
+          width: 100%;
+          white-space: normal;
+          text-align: center;
+        }
+
+        .hero-media {
+          min-height: 360px;
+          border-radius: var(--radius);
+        }
+
+        .hero-media img {
+          min-height: 360px;
+        }
+
+        .rating-medal {
+          right: 18px;
+          bottom: 18px;
+          width: 104px;
+          height: 104px;
+          border-width: 5px;
+        }
+
+        .rating-medal strong {
+          font-size: 1.58rem;
+        }
+
+        .hero-stats,
+        .service-grid,
+        .feature-grid,
+        .hours-grid,
+        .quick-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 78px 0;
+        }
+
+        .section-heading h2,
+        .about-content h2,
+        .contact-title h2,
+        .brands-heading h2 {
+          font-size: 2.55rem;
+        }
+
+        .about-image img {
+          height: 380px;
+        }
+
+        .testimonial-card {
+          flex-basis: calc(100vw - 46px);
+          min-height: 360px;
+        }
+
+        .form-card {
+          padding: 26px;
+        }
+
+        .wa-popup {
+          right: 14px;
+          bottom: 94px;
+        }
+
+        .wa-float {
+          right: 18px;
+          bottom: 18px;
+        }
+
+        .back-top {
+          left: 16px;
+          bottom: 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Pet Sus | Clínica Veterinária Popular 24 horas - Fortaleza",
+        "telephone": "+55 85 99680-4574",
+        "image": "assets/images/petsus-logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Antônio Arruda, 1188 - Vila Velha",
+          "addressLocality": "Fortaleza",
+          "addressRegion": "CE",
+          "postalCode": "60347-255",
+          "addressCountry": "BR"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "55"
+        },
+        "sameAs": [
+          "https://www.instagram.com/petsusclinicavet/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#inicio" aria-label="Pet Sus Clínica Veterinária">
+          <span class="brand-mark"><img src="assets/images/petsus-logo.jpg" width="165" height="220" alt="" /></span>
+          <span class="brand-name">
+            <small>Clínica veterinária</small>
+            <strong>Pet Sus</strong>
+          </span>
+        </a>
+
+        <nav class="nav-links" data-nav aria-label="Navegação principal">
+          <a href="#inicio" class="is-active">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="social-button instagram-button" href="https://www.instagram.com/petsusclinicavet/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg>
+          </a>
+          <a class="btn btn-gold" href="#contato">
+            <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 2v4m8-4v4M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="m9 14 2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Agendar
+          </a>
+          <button class="menu-toggle" type="button" data-menu aria-expanded="false" aria-label="Abrir menu">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.5L12 17l-5.8 3.1 1.1-6.5-4.8-4.7 6.6-.9L12 2Z" fill="currentColor" />
+              </svg>
+              Clínica veterinária popular 24 horas em Fortaleza
+            </p>
+            <h1>Cuidado completo e popular <span>24h</span>.</h1>
+            <p class="hero-text">
+              Tudo o que seu animal precisa em um só lugar: atendimento veterinário, internação, exames, cirurgias,
+              especialidades, medicamentos e acessórios com uma equipe acolhedora.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="#contato">
+                Solicitar atendimento
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="btn btn-dark" href="#servicos">
+                Conheça os serviços
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media reveal" aria-label="Atendimento veterinário da Pet Sus">
+            <img
+              src="assets/images/petsus-hero.png"
+              width="1024"
+              height="1536"
+              alt="Equipe Pet Sus em atendimento"
+            />
+            <div class="rating-medal" aria-label="Avaliação 4.8 no Google">
+              <span>
+                <strong>4.8</strong>
+                <span>Google rating</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="hero-stats reveal" aria-label="Resumo da clínica">
+          <div class="hero-stat"><strong>24h</strong><span>Atendimento todos os dias</span></div>
+          <div class="hero-stat"><strong>4.8</strong><span>Avaliação Google</span></div>
+          <div class="hero-stat"><strong>55</strong><span>Avaliações públicas</span></div>
+          <div class="hero-stat"><strong>Petlove</strong><span>Plano atendido</span></div>
+        </div>
+      </div>
+
+      <section class="section section-cream" id="servicos">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">O que oferecemos</p>
+            <h2>Nossos Serviços</h2>
+            <p>
+              Atendimento popular, completo e 24 horas: da consulta ao exame, da internação ao acessório que ajuda na
+              rotina do pet.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v18M3 12h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Emergência 24h</h3>
+              <p>Plantão permanente para quadros urgentes, dor, acidentes e situações que precisam de resposta imediata.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 18c0-4 2-7 4-7s4 3 4 7M7 7c0 1.7-1.1 3-2.5 3S2 8.7 2 7s1.1-3 2.5-3S7 5.3 7 7Zm15 0c0 1.7-1.1 3-2.5 3S17 8.7 17 7s1.1-3 2.5-3S22 5.3 22 7ZM12 6c0 1.7-1.1 3-2.5 3S7 7.7 7 6s1.1-3 2.5-3S12 4.3 12 6Zm5 0c0 1.7-1.1 3-2.5 3S12 7.7 12 6s1.1-3 2.5-3S17 4.3 17 6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Consulta popular</h3>
+              <p>Avaliação veterinária acessível, clara e acolhedora para cães, gatos e pets de diferentes perfis.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 17c5-1 8-4 9-9 3 4 5 6 7 7-4 4-9 5-16 2Zm9-9c-2-2-4-3-7-3 1.2 2.8 3.2 4.2 6 4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Animais silvestres</h3>
+              <p>Atendimento para pets que exigem manejo cuidadoso, orientação específica e avaliação responsável.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 20 20 7l-3-3L4 17v3h3Zm8-14 3 3M4 14l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Cirurgias e castração</h3>
+              <p>Procedimentos clínicos, odontológicos e cirúrgicos com preparo, cuidado e acompanhamento pós-operatório.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 5h14v14H5zM9 9h6M9 13h6M9 17h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Exames completos</h3>
+              <p>Suporte para qualquer exame necessário, com encaminhamento, diagnóstico e acompanhamento da equipe.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s8-4.6 8-11a8 8 0 1 0-16 0c0 6.4 8 11 8 11Zm0-14v6m-3-3h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Especialidades clínicas</h3>
+              <p>Dermatologia, oftalmologia, fisioterapia, internação e acompanhamento para casos de maior cuidado.</p>
+            </article>
+          </div>
+
+          <div class="chips reveal" aria-label="Lista completa de serviços">
+            <span class="chip">Animais silvestres</span>
+            <span class="chip">Castração</span>
+            <span class="chip">Cirurgia dentária veterinária</span>
+            <span class="chip">Cirurgia veterinária</span>
+            <span class="chip">Dermatologista veterinário</span>
+            <span class="chip">Oftalmologia</span>
+            <span class="chip">Fisioterapia</span>
+            <span class="chip">Centro de internamento</span>
+            <span class="chip">Exames necessários</span>
+            <span class="chip">Acessórios</span>
+            <span class="chip">Medicamentos</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-shop" aria-labelledby="atalhos-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Atalhos rápidos</p>
+            <h2 id="atalhos-title">O que seu pet precisa agora?</h2>
+            <p>Escolha uma opção e o formulário já prepara a mensagem certa para iniciar o atendimento.</p>
+          </div>
+
+          <div class="quick-grid">
+            <a
+              class="quick-card medicine reveal"
+              href="#contato"
+              data-quick-service="Remédios veterinários"
+              data-quick-note="Olá! Gostaria de comprar medicamentos veterinários e preciso de orientação."
+            >
+              <div class="quick-visual" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <path d="M30 52 58 24a14 14 0 0 1 20 20L50 72a14 14 0 0 1-20-20Z" fill="none" stroke="currentColor" stroke-width="7" />
+                  <path d="m44 38 20 20M27 72h20M37 62v20" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="quick-body">
+                <span><small>Shop</small><strong>Comprar medicamentos</strong></span>
+                <span class="quick-arrow">
+                  <svg width="21" height="21" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="quick-card vaccine reveal"
+              href="#contato"
+              data-quick-service="Vacina"
+              data-quick-note="Olá! Gostaria de agendar vacinação para meu pet."
+            >
+              <div class="quick-visual" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <path d="M62 18 78 34M56 24l16 16M20 76l30-30M48 30l18 18-18 18-18-18 18-18Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="m28 68 10 10" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="quick-body">
+                <span><small>Serviços</small><strong>Agendar vacinas</strong></span>
+                <span class="quick-arrow">
+                  <svg width="21" height="21" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="quick-card accessories reveal"
+              href="#contato"
+              data-quick-service="Acessórios para pets"
+              data-quick-note="Olá! Gostaria de comprar acessórios para meu pet."
+            >
+              <div class="quick-visual" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <path d="M30 36h36a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10H30a10 10 0 0 1-10-10V46a10 10 0 0 1 10-10Z" fill="none" stroke="currentColor" stroke-width="7" />
+                  <path d="M36 36v-6a12 12 0 0 1 24 0v6M35 55h26" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="quick-body">
+                <span><small>Shop</small><strong>Comprar acessórios</strong></span>
+                <span class="quick-arrow">
+                  <svg width="21" height="21" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="quick-card exams reveal"
+              href="#contato"
+              data-quick-service="Plano Petlove"
+              data-quick-note="Olá! Gostaria de saber como funciona o atendimento do plano Petlove na Pet Sus."
+            >
+              <div class="quick-visual" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <path d="M48 78S20 62 20 34a16 16 0 0 1 28-10 16 16 0 0 1 28 10c0 28-28 44-28 44Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+                  <path d="M48 34v24M36 46h24" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="quick-body">
+                <span><small>Plano</small><strong>Atendimento Petlove</strong></span>
+                <span class="quick-arrow">
+                  <svg width="21" height="21" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container about-grid">
+          <div class="about-image reveal">
+            <img
+              src="assets/images/petsus-plano.png"
+              width="506"
+              height="900"
+              alt="Plano Petlove atendido pela Pet Sus"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="about-content reveal">
+            <p class="section-label">Sobre nós</p>
+            <h2>Atendimento popular com estrutura completa.</h2>
+            <div class="gold-rule"></div>
+            <p>
+              A Pet Sus é uma clínica veterinária popular 24 horas em Fortaleza, criada para unir acesso, cuidado e
+              estrutura em um mesmo lugar.
+            </p>
+            <p>
+              Oferece atendimento veterinário, acessórios, medicamentos, internação, exames e especialidades com
+              profissionais preparados para orientar cada tutor com clareza.
+            </p>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2v20M2 12h20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span><strong>Pronto atendimento</strong><span>Equipe disponível para urgências todos os dias.</span></span>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 21s7-4.6 7-11a7 7 0 1 0-14 0c0 6.4 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </div>
+                <span><strong>Localização</strong><span>Vila Velha, na R. Antônio Arruda, 1188.</span></span>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3c3 2 7 2 10 0 1 4 0 8-2 11l-3 7-3-7C7 11 6 7 7 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span><strong>Plano Petlove</strong><span>Atendimento para tutores que utilizam o plano de saúde parceiro.</span></span>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 7 9 18l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span><strong>Cuidado completo</strong><span>Consulta, tratamento, cirurgia, exames, acessórios e internação.</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark testimonials" id="depoimentos">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Quem confia recomenda</p>
+            <h2>Depoimentos reais</h2>
+            <p>Relatos de tutores que destacam acolhimento, estrutura, limpeza e cuidado com os pets.</p>
+          </div>
+
+          <div class="testimonial-viewport reveal" data-carousel-viewport>
+            <div class="testimonial-track" data-carousel-track>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Passei em consulta com a Dra. Brenda com a Jade. Ela foi extremamente cuidadosa, atenciosa e dedicada durante toda a consulta."</blockquote>
+                <div class="person"><span class="avatar">RS</span><span><strong>R Senhorita</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Ótimo atendimento, profissionais qualificados e atenciosos. Minha cachorrinha recebeu alta com menos de 24 horas de pós-operatório."</blockquote>
+                <div class="person"><span class="avatar">RM</span><span><strong>Rutiana Moura</strong><span>Local Guide</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Atendimento muito bom, equipe atenciosa e paciente. Deram todo o suporte necessário e trataram meu pet com muito cuidado."</blockquote>
+                <div class="person"><span class="avatar">GL</span><span><strong>Gabrielly Lima</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"A Dra. Débora Marinho é extremamente atenciosa, competente e dedicada. Explica tudo com paciência e cuidado."</blockquote>
+                <div class="person"><span class="avatar">WR</span><span><strong>Willian Rebouças</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"A clínica Petsus é completa, tem profissionais experientes e uma equipe acolhedora. Minha bebê pet é sempre muito bem assistida."</blockquote>
+                <div class="person"><span class="avatar">MS</span><span><strong>Mariana Sampaio</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Meu gato ficou doente da bexiga e não conseguia urinar. Depois de passar por diversas clínicas, encontrei ajuda de verdade."</blockquote>
+                <div class="person"><span class="avatar">JY</span><span><strong>Juan Yuri</strong><span>Local Guide</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Minha cachorrinha Manuela passou por cirurgia ortopédica na clínica. Fomos bem recebidas e senti confiança do início ao fim."</blockquote>
+                <div class="person"><span class="avatar">LS</span><span><strong>Livia Soares</strong><span>Local Guide</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Levei minha gatinha Judy para um check-up e fui muito bem atendida. A Dra. Brenda foi cuidadosa, paciente e detalhista."</blockquote>
+                <div class="person"><span class="avatar">AF</span><span><strong>Arquivos Faculdade</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"A melhor clínica que existe. Dra. Brenda e sua equipe são maravilhosos; entrego a saúde do meu pet de olhos fechados."</blockquote>
+                <div class="person"><span class="avatar">GB</span><span><strong>Guilherme Barros</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Excelente clínica. Profissionais maravilhosos, equipe educada, carinhosa e humana com nossos pets."</blockquote>
+                <div class="person"><span class="avatar">IS</span><span><strong>Isabela Souza</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Nunca me senti tão respeitado e acolhido. Atendimento atencioso desde a recepção e cuidado com meu Spike."</blockquote>
+                <div class="person"><span class="avatar">JL</span><span><strong>Julian Lima</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Levei minha gatinha para ser castrada e ela foi muito bem atendida do início ao fim. Equipe atenciosa e preparada."</blockquote>
+                <div class="person"><span class="avatar">CB</span><span><strong>Carolina Batista</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Maravilhosos. Desde a recepção até a consulta, meu gatinho ficou super tranquilo e foi muito bem cuidado."</blockquote>
+                <div class="person"><span class="avatar">A</span><span><strong>Apollo</strong><span>Avaliação verificada</span></span></div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Amei o atendimento da clínica como um todo. Minha Jade fez a castração e foi bem acolhida do início ao fim."</blockquote>
+                <div class="person"><span class="avatar">DB</span><span><strong>Dayana Barbosa</strong><span>Avaliação verificada</span></span></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="carousel-controls" aria-label="Controles dos depoimentos">
+            <button class="arrow-button" type="button" data-prev aria-label="Depoimento anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m15 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dots" data-dots></div>
+            <button class="arrow-button" type="button" data-next aria-label="Próximo depoimento">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="hours-grid reveal" aria-label="Horários de funcionamento">
+            <div class="hour-card">Segunda <span>24 horas</span></div>
+            <div class="hour-card">Terça <span>24 horas</span></div>
+            <div class="hour-card">Quarta <span>24 horas</span></div>
+            <div class="hour-card">Quinta <span>24 horas</span></div>
+            <div class="hour-card">Sexta <span>24 horas</span></div>
+            <div class="hour-card">Sábado <span>24 horas</span></div>
+            <div class="hour-card">Domingo <span>24 horas</span></div>
+            <div class="hour-card">Feriados <span>24 horas</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cream" id="contato">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-title reveal">
+              <p class="section-label">Contato</p>
+              <h2>Como você prefere ser atendido?</h2>
+              <div class="gold-rule"></div>
+              <p>
+                Escolha o serviço e envie a solicitação pelo WhatsApp. A mensagem já sai organizada para facilitar o
+                primeiro atendimento.
+              </p>
+
+              <div class="contact-list">
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6.1 6.1l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span><strong>WhatsApp</strong><a href="#" data-wa-link>(85) 99680-4574</a></span>
+                </div>
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 21s7-4.7 7-11a7 7 0 1 0-14 0c0 6.3 7 11 7 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                  </div>
+                  <span><strong>Endereço</strong><span>R. Antônio Arruda, 1188 - Vila Velha, Fortaleza - CE</span></span>
+                </div>
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+                      <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                  </div>
+                  <span><strong>Instagram</strong><a href="https://www.instagram.com/petsusclinicavet/" target="_blank" rel="noopener">@petsusclinicavet</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-card reveal">
+              <h3>Solicitar atendimento</h3>
+              <p>A conversa abre direto no WhatsApp com o serviço selecionado.</p>
+              <form data-booking-form>
+                <div class="field">
+                  <label for="nome">Nome completo</label>
+                  <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="servico">Serviço desejado</label>
+                  <select id="servico" name="servico" required>
+                    <option value="" selected disabled>Selecione um serviço</option>
+                    <option>Animais silvestres</option>
+                    <option>Castração</option>
+                    <option>Cirurgia dentária veterinária</option>
+                    <option>Cirurgia veterinária</option>
+                    <option>Dermatologista veterinário</option>
+                    <option>Oftalmologia</option>
+                    <option>Fisioterapia</option>
+                    <option>Centro de internamento</option>
+                    <option>Exames necessários</option>
+                    <option>Remédios veterinários</option>
+                    <option>Acessórios para pets</option>
+                    <option>Serviço de emergência</option>
+                    <option>Plano Petlove</option>
+                    <option>Vacina</option>
+                    <option>Vacinas para animais</option>
+                    <option>Atendimento veterinário</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="email">E-mail <span>(opcional)</span></label>
+                  <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" />
+                </div>
+                <div class="field">
+                  <label for="mensagem">Mensagem <span>(opcional)</span></label>
+                  <textarea id="mensagem" name="mensagem" placeholder="Descreva sua necessidade ou tire uma dúvida..."></textarea>
+                </div>
+                <button class="btn btn-gold" type="submit">
+                  Solicitar pelo WhatsApp
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="map reveal" id="localizacao">
+            <iframe
+              title="Mapa da Pet Sus"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Pet%20Sus%20Clinica%20Veterinaria%20Popular%2024%20horas%20R.%20Antonio%20Arruda%201188%20Vila%20Velha%20Fortaleza%20CE&amp;hl=pt-BR&amp;z=16&amp;output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="brands" aria-labelledby="marcas-title">
+        <div class="brands-heading reveal">
+          <p class="section-label">Marcas que acompanham o cuidado</p>
+          <h2 id="marcas-title">Produtos e linhas de confiança</h2>
+          <p>Uma vitrine contínua para destacar marcas, laboratórios e fornecedores trabalhados pela clínica.</p>
+        </div>
+
+        <div class="brand-marquee reveal" aria-label="Marcas em movimento">
+          <div class="brand-track">
+            <div class="brand-logo"><strong>Royal Canin</strong><span>Nutrição</span></div>
+            <div class="brand-logo"><strong>Hill's</strong><span>Dietas clínicas</span></div>
+            <div class="brand-logo"><strong>PremierPet</strong><span>Alimentos</span></div>
+            <div class="brand-logo"><strong>Golden</strong><span>Premium especial</span></div>
+            <div class="brand-logo"><strong>GranPlus</strong><span>Pet food</span></div>
+            <div class="brand-logo"><strong>Purina</strong><span>Cuidados diários</span></div>
+            <div class="brand-logo"><strong>Zoetis</strong><span>Saúde animal</span></div>
+            <div class="brand-logo"><strong>Virbac</strong><span>Veterinária</span></div>
+            <div class="brand-logo"><strong>Royal Canin</strong><span>Nutrição</span></div>
+            <div class="brand-logo"><strong>Hill's</strong><span>Dietas clínicas</span></div>
+            <div class="brand-logo"><strong>PremierPet</strong><span>Alimentos</span></div>
+            <div class="brand-logo"><strong>Golden</strong><span>Premium especial</span></div>
+            <div class="brand-logo"><strong>GranPlus</strong><span>Pet food</span></div>
+            <div class="brand-logo"><strong>Purina</strong><span>Cuidados diários</span></div>
+            <div class="brand-logo"><strong>Zoetis</strong><span>Saúde animal</span></div>
+            <div class="brand-logo"><strong>Virbac</strong><span>Veterinária</span></div>
+          </div>
+          <div class="brand-track reverse">
+            <div class="brand-logo"><strong>Elanco</strong><span>Tratamentos</span></div>
+            <div class="brand-logo"><strong>MSD</strong><span>Saúde animal</span></div>
+            <div class="brand-logo"><strong>Guabi Natural</strong><span>Vida saudável</span></div>
+            <div class="brand-logo"><strong>Matisse</strong><span>Cat food</span></div>
+            <div class="brand-logo"><strong>Faro</strong><span>Pet food</span></div>
+            <div class="brand-logo"><strong>Kelco</strong><span>Pet care</span></div>
+            <div class="brand-logo"><strong>Ecovet</strong><span>Veterinária</span></div>
+            <div class="brand-logo"><strong>Coveli</strong><span>Produtos</span></div>
+            <div class="brand-logo"><strong>Elanco</strong><span>Tratamentos</span></div>
+            <div class="brand-logo"><strong>MSD</strong><span>Saúde animal</span></div>
+            <div class="brand-logo"><strong>Guabi Natural</strong><span>Vida saudável</span></div>
+            <div class="brand-logo"><strong>Matisse</strong><span>Cat food</span></div>
+            <div class="brand-logo"><strong>Faro</strong><span>Pet food</span></div>
+            <div class="brand-logo"><strong>Kelco</strong><span>Pet care</span></div>
+            <div class="brand-logo"><strong>Ecovet</strong><span>Veterinária</span></div>
+            <div class="brand-logo"><strong>Coveli</strong><span>Produtos</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="creator" aria-label="Crédito de criação">
+        <div class="container creator-inner">
+          <img class="signature" src="assets/images/assinatura-davi.png" width="1536" height="1024" alt="Assinatura de Davi Pinheiro" loading="lazy" decoding="async" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Pet Sus</strong>
+          <span>Clínica veterinária popular 24 horas em Fortaleza.</span>
+        </div>
+        <div class="footer-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Agendar</a>
+          <a href="https://www.instagram.com/petsusclinicavet/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <a class="back-top" href="#inicio" data-back-top aria-label="Voltar ao início">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+
+    <div class="wa-popup" data-wa-popup aria-live="polite">
+      <div class="wa-popup-top">
+        <div class="wa-agent">
+          <span class="wa-agent-icon">
+            <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+              <path fill="currentColor" d="M16 3.4A12.5 12.5 0 0 0 5.4 22.5L4 28.6l6.2-1.5A12.5 12.5 0 1 0 16 3.4Zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.7.9 1-3.6-.3-.4A10.2 10.2 0 1 1 16 26.2Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4Z" />
+            </svg>
+          </span>
+          <span><strong>Pet Sus</strong><span>Online agora</span></span>
+        </div>
+        <button class="wa-close" type="button" data-wa-close aria-label="Fechar popup">×</button>
+      </div>
+      <p>Olá! Como podemos ajudar? Clique abaixo para iniciar no WhatsApp.</p>
+      <a href="#" target="_blank" rel="noopener" data-wa-link>Abrir WhatsApp</a>
+    </div>
+
+    <a class="wa-float" href="#" target="_blank" rel="noopener" data-wa-link aria-label="Abrir WhatsApp">
+      <span class="wa-badge">1</span>
+      <svg width="31" height="31" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16 3.4A12.5 12.5 0 0 0 5.4 22.5L4 28.6l6.2-1.5A12.5 12.5 0 1 0 16 3.4Zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.7.9 1-3.6-.3-.4A10.2 10.2 0 1 1 16 26.2Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4Z" />
+      </svg>
+    </a>
+
+    <script>
+      const WHATSAPP_NUMBER = "5585996804574";
+      const INITIAL_MESSAGE = "Olá! Gostaria de saber mais sobre o atendimento da Pet Sus.";
+      const waUrl = (message) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      document.querySelectorAll("[data-wa-link]").forEach((link) => {
+        link.href = waUrl(INITIAL_MESSAGE);
+      });
+
+      const nav = document.querySelector("[data-nav]");
+      const menu = document.querySelector("[data-menu]");
+      const backTop = document.querySelector("[data-back-top]");
+
+      menu.addEventListener("click", () => {
+        const open = nav.classList.toggle("is-open");
+        document.body.classList.toggle("is-menu-open", open);
+        menu.setAttribute("aria-expanded", String(open));
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          document.body.classList.remove("is-menu-open");
+          menu.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const sections = [...document.querySelectorAll("main section[id]")];
+      const navLinks = [...document.querySelectorAll(".nav-links a")];
+
+      const syncNavigation = () => {
+        const y = window.scrollY + 160;
+        let active = sections[0].id;
+        sections.forEach((section) => {
+          if (section.offsetTop <= y) active = section.id;
+        });
+        navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${active}`));
+        backTop.classList.toggle("is-visible", window.scrollY > 520);
+      };
+
+      window.addEventListener("scroll", syncNavigation, { passive: true });
+      syncNavigation();
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+      document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+      const bookingForm = document.querySelector("[data-booking-form]");
+      bookingForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const form = new FormData(bookingForm);
+        const name = String(form.get("nome") || "").trim();
+        const service = bookingForm.servico.options[bookingForm.servico.selectedIndex].text.trim();
+        const email = String(form.get("email") || "").trim();
+        const note = String(form.get("mensagem") || "").trim();
+        const message = [
+          `Olá! Meu nome é ${name}.`,
+          `Gostaria de agendar o serviço: ${service}.`,
+          email ? `Meu e-mail: ${email}.` : "",
+          note ? `Observação: ${note}.` : ""
+        ]
+          .filter(Boolean)
+          .join("\n");
+        window.open(waUrl(message), "_blank", "noopener");
+        bookingForm.reset();
+      });
+
+      document.querySelectorAll("[data-quick-service]").forEach((card) => {
+        card.addEventListener("click", () => {
+          const service = card.dataset.quickService;
+          const note = card.dataset.quickNote;
+          const serviceSelect = bookingForm.servico;
+          const noteField = bookingForm.mensagem;
+          if (service) serviceSelect.value = service;
+          if (note) noteField.value = note;
+          window.setTimeout(() => document.querySelector("#nome").focus({ preventScroll: true }), 650);
+        });
+      });
+
+      const popup = document.querySelector("[data-wa-popup]");
+      const closePopup = document.querySelector("[data-wa-close]");
+      const popupTimer = window.setTimeout(() => popup.classList.add("is-visible"), 3200);
+      closePopup.addEventListener("click", () => {
+        window.clearTimeout(popupTimer);
+        popup.classList.remove("is-visible");
+      });
+
+      const viewport = document.querySelector("[data-carousel-viewport]");
+      const track = document.querySelector("[data-carousel-track]");
+      const originalCards = [...track.children];
+      const dotsRoot = document.querySelector("[data-dots]");
+      const next = document.querySelector("[data-next]");
+      const prev = document.querySelector("[data-prev]");
+      let current = 1;
+      let locked = false;
+      let autoplay;
+
+      const firstClone = originalCards[0].cloneNode(true);
+      const lastClone = originalCards[originalCards.length - 1].cloneNode(true);
+      track.insertBefore(lastClone, originalCards[0]);
+      track.appendChild(firstClone);
+
+      const dots = originalCards.map((_, index) => {
+        const dot = document.createElement("button");
+        dot.className = "dot";
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Ir para depoimento ${index + 1}`);
+        dot.addEventListener("click", () => goTo(index + 1));
+        dotsRoot.appendChild(dot);
+        return dot;
+      });
+
+      const slideWidth = () => {
+        const card = track.children[0];
+        const gap = Number.parseFloat(getComputedStyle(track).gap || "0");
+        return card.getBoundingClientRect().width + gap;
+      };
+
+      const activeDot = () => {
+        const index = current === 0 ? originalCards.length - 1 : current > originalCards.length ? 0 : current - 1;
+        dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+      };
+
+      const updateCarousel = (animate = true) => {
+        track.style.transition = animate ? "transform 560ms cubic-bezier(0.16, 1, 0.3, 1)" : "none";
+        track.style.transform = `translateX(${-current * slideWidth()}px)`;
+        activeDot();
+      };
+
+      const goTo = (target) => {
+        if (locked) return;
+        locked = true;
+        current = target;
+        updateCarousel(true);
+      };
+
+      track.addEventListener("transitionend", () => {
+        locked = false;
+        if (current === 0) {
+          current = originalCards.length;
+          updateCarousel(false);
+        }
+        if (current === originalCards.length + 1) {
+          current = 1;
+          updateCarousel(false);
+        }
+      });
+
+      next.addEventListener("click", () => goTo(current + 1));
+      prev.addEventListener("click", () => goTo(current - 1));
+
+      const start = () => {
+        autoplay = window.setInterval(() => goTo(current + 1), 5400);
+      };
+      const stop = () => window.clearInterval(autoplay);
+
+      viewport.addEventListener("mouseenter", stop);
+      viewport.addEventListener("mouseleave", start);
+      viewport.addEventListener("focusin", stop);
+      viewport.addEventListener("focusout", start);
+      window.addEventListener("resize", () => updateCarousel(false));
+
+      let touchStart = 0;
+      viewport.addEventListener(
+        "touchstart",
+        (event) => {
+          touchStart = event.touches[0].clientX;
+          stop();
+        },
+        { passive: true }
+      );
+      viewport.addEventListener(
+        "touchend",
+        (event) => {
+          const delta = event.changedTouches[0].clientX - touchStart;
+          if (Math.abs(delta) > 40) goTo(delta < 0 ? current + 1 : current - 1);
+          start();
+        },
+        { passive: true }
+      );
+
+      updateCarousel(false);
+      start();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,402 @@
+========================================================
+PROMPT REUTILIZAVEL PARA SECOES DE SITE
+(Servicos, Depoimentos, Contato/Agendamento e Popup WhatsApp)
+========================================================
+
+Use este prompt para criar ou atualizar, em qualquer site, as secoes:
+
+- Servicos
+- Depoimentos
+- Contato / Agendamento
+- Popup e botao flutuante do WhatsApp
+
+O prompt deve funcionar para sites de diferentes nichos: clinicas, lojas,
+prestadores de servico, profissionais autonomos, empresas locais, negocios
+premium, landing pages e paginas institucionais.
+
+Adapte textos, cores, icones, imagens, links e nomes conforme o projeto.
+Nao prender a implementacao a uma empresa especifica.
+
+========================================================
+DADOS QUE DEVEM SER SUBSTITUIDOS EM CADA PROJETO
+========================================================
+
+Antes de criar, substituir os campos abaixo pelos dados reais:
+
+- [NOME_DA_EMPRESA]
+- [SEGMENTO_DO_NEGOCIO]
+- [WHATSAPP_COM_DDI_DDD]
+- [INSTAGRAM_URL]
+- [ENDERECO_COMPLETO]
+- [HORARIOS_DE_ATENDIMENTO]
+- [EMAIL_DE_CONTATO]
+- [LINK_GOOGLE_MAPS]
+- [LINK_GOOGLE_MAPS_EMBED]
+- [LISTA_DE_SERVICOS]
+- [LISTA_DE_DEPOIMENTOS]
+- [CORES_DA_MARCA]
+- [IMAGENS_DO_PROJETO]
+
+========================================================
+REGRAS GERAIS
+========================================================
+
+- Criar HTML semantico e acessivel.
+- Usar CSS moderno com Flexbox/Grid.
+- Usar JavaScript vanilla, sem jQuery.
+- Nao usar Bootstrap ou Tailwind, a menos que o projeto ja use.
+- O design deve ser responsivo para desktop, tablet e mobile.
+- Usar animacoes suaves, sem exagero.
+- Manter visual profissional, limpo e premium.
+- Usar icones coerentes com o nicho do site.
+- Links externos devem abrir em nova aba.
+- Se o site for arquivo unico, deixar CSS e JS inline.
+- Se o projeto tiver arquivos separados, respeitar a estrutura existente.
+
+========================================================
+1. SECAO DE SERVICOS
+========================================================
+
+Criar uma secao de servicos reutilizavel.
+
+Requisitos:
+
+- A secao deve ter um id facil de navegar, por exemplo: `servicos`.
+- Criar titulo da secao, exemplo:
+  - `Nossos Servicos`
+  - `O Que Oferecemos`
+  - `Solucoes Para Voce`
+- Criar subtitulo curto explicando o valor dos servicos.
+- Criar grid responsivo de cards.
+
+Grid:
+
+- Desktop: 3 ou 4 colunas, dependendo da quantidade de servicos.
+- Tablet: 2 colunas.
+- Mobile: 1 coluna.
+
+Cada card deve ter:
+
+- Icone relacionado ao servico.
+- Nome do servico.
+- Descricao curta, com 1 a 3 linhas.
+- Opcionalmente, um link ou botao de acao.
+
+Comportamento visual:
+
+- Card com borda discreta ou sombra suave.
+- Hover com leve elevacao.
+- Icone com destaque na cor principal da marca.
+- Transicoes suaves.
+- Espacamento uniforme entre os cards.
+- Altura visual equilibrada para nao parecer baguncado.
+
+Conteudo:
+
+Usar a lista real do projeto:
+
+1. [SERVICO_1] - [DESCRICAO_1]
+2. [SERVICO_2] - [DESCRICAO_2]
+3. [SERVICO_3] - [DESCRICAO_3]
+4. [SERVICO_4] - [DESCRICAO_4]
+5. [SERVICO_5] - [DESCRICAO_5]
+6. [SERVICO_6] - [DESCRICAO_6]
+
+Adicionar ou remover cards conforme a quantidade real.
+
+========================================================
+2. SECAO DE DEPOIMENTOS
+========================================================
+
+Criar uma secao de depoimentos reutilizavel.
+
+Requisitos:
+
+- A secao deve ter titulo, exemplo:
+  - `Depoimentos`
+  - `O Que Nossos Clientes Dizem`
+  - `Quem Confia Recomenda`
+- Criar subtitulo curto reforcando prova social.
+- Usar depoimentos reais quando fornecidos.
+- Cada depoimento deve ter:
+  - Texto do depoimento.
+  - Nome da pessoa.
+  - Iniciais ou avatar.
+  - Avaliacao em estrelas quando fizer sentido.
+  - Marcador visual como `Avaliacao verificada`, se adequado.
+
+Carrossel:
+
+- Implementar carrossel horizontal quando houver mais de 3 depoimentos.
+- Deve ter:
+  - Setas anterior/proximo.
+  - Dots indicadores.
+  - Autoplay suave.
+  - Pausa ao passar o mouse.
+  - Suporte a swipe/toque no mobile.
+  - Transicao fluida.
+
+REGRA OBRIGATORIA:
+
+- O carrossel deve ser infinito.
+- Quando chegar no ultimo depoimento, nao pode parar.
+- Ao avancar depois do ultimo, deve voltar para o primeiro.
+- Ao voltar antes do primeiro, deve ir para o ultimo.
+- Para uma transicao mais suave, criar clones do primeiro e do ultimo card.
+- O usuario nunca deve perceber uma parada brusca no fim.
+
+Visual:
+
+- Card central pode ficar em destaque.
+- Cards laterais podem ter escala/opacidade menor.
+- Usar sombra, borda discreta e bom contraste.
+- Em mobile, garantir que o card caiba sem cortar texto.
+
+Modelo de depoimentos:
+
+1. [NOME_1] / [INICIAIS_1]
+   "[TEXTO_DO_DEPOIMENTO_1]"
+
+2. [NOME_2] / [INICIAIS_2]
+   "[TEXTO_DO_DEPOIMENTO_2]"
+
+3. [NOME_3] / [INICIAIS_3]
+   "[TEXTO_DO_DEPOIMENTO_3]"
+
+Adicionar todos os depoimentos reais do projeto.
+
+========================================================
+3. SECAO DE CONTATO / AGENDAMENTO
+========================================================
+
+Criar uma secao de contato que tambem funcione como agendamento quando o
+projeto tiver servicos.
+
+Requisitos:
+
+- A secao deve ter id, por exemplo: `contato`.
+- Layout com duas colunas no desktop:
+  - Coluna 1: informacoes de contato.
+  - Coluna 2: formulario.
+- No mobile, usar coluna unica.
+
+Coluna de informacoes:
+
+Incluir, conforme o projeto:
+
+- WhatsApp com link clicavel:
+  `https://wa.me/[WHATSAPP_COM_DDI_DDD]`
+- Endereco completo.
+- Horarios de atendimento.
+- Instagram ou redes sociais.
+- E-mail, se existir.
+- Mapa ou link de localizacao, se fizer sentido.
+
+Formulario:
+
+O formulario deve ser simples e funcional.
+
+Campos obrigatorios:
+
+- Nome completo
+  - id: `nome`
+  - placeholder: `Seu nome`
+  - required
+
+- Servico desejado
+  - id: `servico`
+  - select required
+  - primeira opcao disabled/selected:
+    `Selecione um servico`
+  - opcoes baseadas na lista real de servicos do projeto
+
+Campos opcionais:
+
+- E-mail (opcional)
+  - id: `email`
+  - type email
+  - placeholder: `seu@email.com`
+  - O label deve mostrar claramente `(opcional)`.
+
+- Mensagem (opcional)
+  - id: `mensagem`
+  - textarea
+  - placeholder: `Descreva sua necessidade ou tire uma duvida...`
+  - O label deve mostrar claramente `(opcional)`.
+
+REGRA IMPORTANTE:
+
+- Nao criar campo de telefone no formulario quando o envio for pelo WhatsApp.
+- Nao faz sentido pedir telefone se a pessoa ja esta mandando mensagem pelo
+  proprio WhatsApp.
+
+Botao do formulario:
+
+- Texto sugerido:
+  - `Solicitar Agendamento`
+  - `Enviar pelo WhatsApp`
+  - `Falar com a Equipe`
+- Usar icone do WhatsApp quando o envio for para WhatsApp.
+
+Comportamento do formulario:
+
+- Ao enviar, usar JavaScript com `preventDefault()`.
+- Abrir WhatsApp em nova aba:
+  `https://wa.me/[WHATSAPP_COM_DDI_DDD]?text=[MENSAGEM_CODIFICADA]`
+- A mensagem deve ser montada automaticamente.
+- Usar o texto visivel do servico escolhido, nao apenas o value tecnico.
+- Incluir e-mail somente se preenchido.
+- Incluir mensagem/observacao somente se preenchida.
+- Nao incluir telefone.
+- Depois de abrir o WhatsApp, resetar o formulario.
+
+Modelo da mensagem:
+
+`Ola! Meu nome e [NOME].`
+`Gostaria de agendar o servico: [SERVICO_ESCOLHIDO].`
+`Meu e-mail: [EMAIL].` somente se preenchido
+`Observacao: [MENSAGEM].` somente se preenchida
+
+========================================================
+4. MAPA / LOCALIZACAO
+========================================================
+
+Se o projeto tiver local fisico, incluir mapa.
+
+Requisitos:
+
+- Usar iframe com link proprio de embed.
+- O link do iframe deve conter `output=embed` quando for Google Maps.
+- Exemplo generico:
+  `https://maps.google.com/maps?q=[ENDERECO_OU_EMPRESA]&hl=pt-BR&z=16&output=embed`
+- Usar:
+  - `allowfullscreen`
+  - `loading="lazy"`
+  - `referrerpolicy="no-referrer-when-downgrade"`
+
+Importante:
+
+- Nao usar no iframe o link normal de redirecionamento do Google Maps, pois ele
+  pode nao carregar incorporado.
+- Para botao/link de localizacao, usar o link normal do Google Maps.
+- Em atributos HTML, trocar `&` por `&amp;`.
+
+========================================================
+5. POPUP E BOTAO FLUTUANTE DO WHATSAPP
+========================================================
+
+Criar botao flutuante do WhatsApp.
+
+Requisitos do botao:
+
+- Fixo na tela.
+- Z-index alto.
+- Icone oficial do WhatsApp.
+- Hover com leve escala/elevacao.
+- Sombra suave.
+- Abrir em nova aba.
+- Link:
+  `https://wa.me/[WHATSAPP_COM_DDI_DDD]?text=[MENSAGEM_INICIAL]`
+- Mensagem inicial generica:
+  `Ola! Gostaria de saber mais.`
+
+Posicao:
+
+- Usar a posicao que combinar com o layout.
+- Se nao houver preferencia, usar canto inferior direito.
+- Se o projeto ja tiver padrao de canto inferior esquerdo, respeitar o padrao.
+
+Popup/widget:
+
+- Criar um pequeno popup de WhatsApp.
+- Deve aparecer automaticamente depois de alguns segundos.
+- Deve ter botao de fechar.
+- Deve ter:
+  - Nome da empresa.
+  - Status, exemplo: `Online agora`.
+  - Mensagem curta de boas-vindas.
+  - Botao/link para abrir WhatsApp.
+
+Texto sugerido:
+
+`Ola! Como podemos ajudar?`
+`Clique abaixo para iniciar no WhatsApp:`
+
+Botao:
+
+`Abrir WhatsApp`
+
+Comportamento:
+
+- O popup deve aparecer com animacao suave.
+- Nao deve bloquear a navegacao.
+- Deve ser responsivo.
+- Deve ficar acima do conteudo, mas sem cobrir botoes importantes.
+
+========================================================
+6. LINKS DE AGENDAMENTO NO SITE
+========================================================
+
+Quando existir botao de agendamento no menu, hero ou outra secao:
+
+- O botao deve levar para a secao de contato/agendamento (`#contato`) quando
+  houver formulario com escolha de servico.
+- Nao abrir WhatsApp direto se a pessoa ainda precisa escolher o servico.
+- Depois que ela escolher o servico no formulario, o WhatsApp abre com a
+  mensagem correta.
+
+Exemplos de botoes:
+
+- `Agendar`
+- `Agendar Consulta`
+- `Solicitar Orcamento`
+- `Escolher Servico`
+
+Todos devem apontar para o formulario quando a escolha do servico for necessaria.
+
+========================================================
+7. RESPONSIVIDADE E QUALIDADE VISUAL
+========================================================
+
+- Garantir que textos nao estourem em botoes, cards ou labels.
+- Em mobile, formularios devem ficar em uma coluna.
+- Cards de servicos devem manter espacamento confortavel.
+- Cards de depoimentos devem caber na tela.
+- Popups e botoes flutuantes nao devem cobrir o formulario.
+- Usar `clamp()` com cuidado, sem exagerar no tamanho dos textos.
+- Manter contraste acessivel.
+- Animacoes devem ser suaves e nao causar travamento.
+
+========================================================
+8. CHECKLIST FINAL
+========================================================
+
+Antes de finalizar, conferir:
+
+- [ ] A secao de servicos esta responsiva.
+- [ ] Os servicos do select sao os mesmos servicos oferecidos no site.
+- [ ] O formulario nao tem campo de telefone quando o envio e pelo WhatsApp.
+- [ ] E-mail esta marcado como opcional.
+- [ ] Mensagem esta marcada como opcional.
+- [ ] O WhatsApp abre com nome e servico escolhido.
+- [ ] O WhatsApp nao envia campos vazios.
+- [ ] O carrossel de depoimentos volta do ultimo para o primeiro.
+- [ ] O carrossel tambem volta do primeiro para o ultimo ao clicar anterior.
+- [ ] As setas e dots funcionam.
+- [ ] O popup do WhatsApp abre e fecha corretamente.
+- [ ] O botao flutuante abre WhatsApp.
+- [ ] O mapa carrega se houver secao de localizacao.
+- [ ] O layout esta bom no mobile.
+
+========================================================
+INSTRUCAO FINAL
+========================================================
+
+Crie ou atualize apenas as secoes necessarias:
+servicos, depoimentos, contato/agendamento, mapa/localizacao se houver,
+popup e botao flutuante do WhatsApp.
+
+Nao deixar conteudo preso a uma empresa especifica.
+Usar sempre os dados reais do projeto atual.
+Manter as funcoes prontas para producao.
+========================================================
